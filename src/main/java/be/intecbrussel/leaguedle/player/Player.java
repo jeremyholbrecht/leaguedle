@@ -15,6 +15,8 @@ public class Player {
     private Integer gamesWon;
     private Integer averageGuesses;
 
+    public Player(){}
+
     public Player(String userName, String password, String email, Integer gamesWon, Integer averageGuesses) {
         this.userName = userName;
         this.password = password;
