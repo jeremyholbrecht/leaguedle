@@ -14,6 +14,7 @@ public class Player {
     private String email;
     private Integer gamesWon;
     private Integer averageGuesses;
+    // TODO: add high score
 
     public Player(){}
 
