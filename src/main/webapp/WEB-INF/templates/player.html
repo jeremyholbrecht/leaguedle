@@ -11,14 +11,13 @@
     <title>Document</title>
 </head>
 <body>
-<div th:each="p:${players}">
-    <h3>Username:</h3>
-    <p th:text="${p.userName}"></p>
-    <h3>Average Guesses:</h3>
-    <p th:text="${p.averageGuesses}"></p>
-    <h3>Games Won:</h3>
-    <p th:text="${p.gamesWon}"></p>
-</div>
+<h2>Username</h2>
+<p th:text="${player.userName}"></p>
+<h2>Wins</h2>
+<p th:text="${player.gamesWon}"></p>
+<h2>Average Guesses</h2>
+<p th:text="${player.averageGuesses}"></p>
+
 
 <button onclick="toggleLightMode()">Light Mode</button>
 

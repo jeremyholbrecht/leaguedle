@@ -15,6 +15,11 @@ public class PlayerService {
         this.playerRepository = playerRepository;
     }
 
+    // return played based by id given if nothing is found return null
+    public Player getPlayerbyId(Long id){
+        return playerRepository.findById(id).orElse(null);
+    }
+
     // return list of all players
     public List<Player> getAllPlayers(){
         return playerRepository.findAll();

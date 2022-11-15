@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class PlayerController {
@@ -15,14 +16,17 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    //@GetMapping("/signup")
-    //public String test(){
-      //  return "signup";
-   // }
-
-    @GetMapping("/players")
+   /* @GetMapping("/player")
     public String allPlayers(Model model){
             model.addAttribute("players", playerService.getAllPlayers());
-            return "players";
+            return "player";
     }
+   */
+
+    @GetMapping("/player/{id}")
+    public String playerById(Model model, @PathVariable Long id){
+        model.addAttribute("player", playerService.getPlayerbyId(id));
+        return "player";
+    }
+
 }
