@@ -16,17 +16,18 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-   /* @GetMapping("/player")
-    public String allPlayers(Model model){
-            model.addAttribute("players", playerService.getAllPlayers());
-            return "player";
-    }
-   */
-
     @GetMapping("/player/{id}")
     public String playerById(Model model, @PathVariable Long id){
-        model.addAttribute("player", playerService.getPlayerbyId(id));
+        model.addAttribute("player", playerService.getPlayerById(id));
         return "player";
     }
+
+    @GetMapping("/highscores")
+    public String playerHighScores(Model model){
+        model.addAttribute("highscores", playerService.orderByHighScore());
+        return "highscores";
+    }
+
+
 
 }

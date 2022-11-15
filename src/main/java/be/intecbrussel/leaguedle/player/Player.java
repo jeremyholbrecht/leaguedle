@@ -14,16 +14,18 @@ public class Player {
     private String email;
     private Integer gamesWon;
     private Integer averageGuesses;
-    // TODO: add high score
+    private Integer highScore;
 
     public Player(){}
 
-    public Player(String userName, String password, String email, Integer gamesWon, Integer averageGuesses) {
+    public Player(String userName, String password, String email, Integer gamesWon, Integer averageGuesses,
+                  Integer highScore) {
         this.userName = userName;
         this.password = password;
         this.email = email;
         this.gamesWon = gamesWon;
         this.averageGuesses = averageGuesses;
+        this.highScore = highScore;
     }
 
     public Long getId() {
@@ -74,6 +76,14 @@ public class Player {
         this.averageGuesses = averageGuesses;
     }
 
+    public Integer getHighScore() {
+        return highScore;
+    }
+
+    public void setHighScore(Integer highScore) {
+        this.highScore = highScore;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
@@ -83,6 +93,7 @@ public class Player {
                 ", email='" + email + '\'' +
                 ", gamesWon=" + gamesWon +
                 ", averageGuesses=" + averageGuesses +
+                ", highScore=" + highScore +
                 '}';
     }
 }
