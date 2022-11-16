@@ -27,9 +27,15 @@ public class PlayerService {
         return playerRepository.findAll();
     }
 
+    // add player to database
+    public void createPlayer(Player player){
+        playerRepository.save(player);
+    }
+
     // return list of players sorted by their high scores in descending order
     public List<Player> orderByHighScore(){
        List<Player> players = playerRepository.findAll();
+       //TODO: ask pearl how to fix
        players.stream().sorted(Comparator.comparing(Player::getHighScore).reversed()).collect(Collectors.toList());
        return players;
     }
