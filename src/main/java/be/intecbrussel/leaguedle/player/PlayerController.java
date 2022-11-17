@@ -23,6 +23,7 @@ public class PlayerController {
         return "player";
     }
 
+    //test
     // TODO: ask Pearl how to fix Request method 'Get' not supported"
     @PostMapping("/signup")
     public String addPlayer(Player player){
