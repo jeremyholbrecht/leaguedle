@@ -10,11 +10,13 @@ body {
 button {
     color: #FFFFFF;
     background: #000000;
+    border: solid 1px #FFFFFF;
 }
 
 button:hover{
-    background-color: #ffff00;
+    color: #ffff00;
     cursor: pointer;
+    border: solid 1px #ffff00;
 }
 
 .light-mode {
