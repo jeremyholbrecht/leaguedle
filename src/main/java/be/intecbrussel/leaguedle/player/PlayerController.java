@@ -17,6 +17,10 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
+    @GetMapping("/index")
+    public String indexPage(){
+        return "index";
+    }
     @GetMapping("/player/{id}")
     public String playerById(Model model, @PathVariable Long id){
         model.addAttribute("player", playerService.getPlayerById(id));
@@ -32,7 +36,7 @@ public class PlayerController {
     @PostMapping("/signup")
     public String addPlayer(Player player){
         playerService.createPlayer(player);
-        return "index";
+        return "redirect:/index";
     }
 
     @GetMapping("/highscores")

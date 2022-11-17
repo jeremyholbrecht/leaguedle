@@ -7,6 +7,16 @@ body {
     margin: auto;
 }
 
+button {
+    color: #FFFFFF;
+    background: #000000;
+}
+
+button:hover{
+    background-color: #ffff00;
+    cursor: pointer;
+}
+
 .light-mode {
     color: black;
     background-color: white;

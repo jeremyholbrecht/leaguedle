@@ -12,14 +12,13 @@
 <body>
 <div id="container">
   <form role="form" method="post" th:action="@{/signup}" th:object="${player}">
-    <div class="field"><label>Username:</label>
-      <input type="text" th:field="*{userName}"/><br/></div>
-    <div class="field"><label>Password:</label>
-      <input type="text" th:field="*{password}"/><br/></div>
-    <div class="field"><label>Email:</label>
-      <input type="text" th:field="*{email}"/><br/></div>
-    <div id="buttons"><input type="submit" value="Submit" />
-    </div>
+      <h3>Username:</h3>
+      <input type="text" th:field="*{userName}"/>
+      <h3>Password</h3>
+      <input type="text" th:field="*{password}"/>
+      <h3>Email:</h3>
+      <input type="text" th:field="*{email}"/>
+     <button type="submit" value="Submit">Submit</button>
   </form>
 </div>
 
