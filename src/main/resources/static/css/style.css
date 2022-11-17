@@ -7,6 +7,12 @@ body {
     margin: auto;
 }
 
+input{
+    color: #ffffff;
+    background: #000000;
+    border: solid 1px #FFFFFF;
+}
+
 button {
     color: #FFFFFF;
     background: #000000;
