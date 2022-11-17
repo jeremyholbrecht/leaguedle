@@ -23,12 +23,16 @@ public class PlayerController {
         return "player";
     }
 
-    //test
-    // TODO: ask Pearl how to fix Request method 'Get' not supported"
+    @GetMapping("/signup")
+    public String signUpPage(Model model){
+        model.addAttribute("player", new Player());
+        return "signup";
+    }
+
     @PostMapping("/signup")
     public String addPlayer(Player player){
         playerService.createPlayer(player);
-        return "redirect:/index";
+        return "index";
     }
 
     @GetMapping("/highscores")
@@ -36,6 +40,8 @@ public class PlayerController {
         model.addAttribute("highscores", playerService.orderByHighScore());
         return "highscores";
     }
+
+
 
 
 
