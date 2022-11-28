@@ -17,13 +17,22 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
+    @GetMapping("/index")
+    public String indexPage(){
+        return "index";
+    }
     @GetMapping("/player/{id}")
     public String playerById(Model model, @PathVariable Long id){
         model.addAttribute("player", playerService.getPlayerById(id));
         return "player";
     }
 
-    // TODO: ask Pearl how to fix Request method 'Get' not supported"
+    @GetMapping("/signup")
+    public String signUpPage(Model model){
+        model.addAttribute("player", new Player());
+        return "signup";
+    }
+
     @PostMapping("/signup")
     public String addPlayer(Player player){
         playerService.createPlayer(player);
@@ -35,6 +44,8 @@ public class PlayerController {
         model.addAttribute("highscores", playerService.orderByHighScore());
         return "highscores";
     }
+
+
 
 
 

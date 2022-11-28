@@ -17,7 +17,7 @@ public class PlayerService {
         this.playerRepository = playerRepository;
     }
 
-    // return played by id if nothing is found return null
+    // return player by id if nothing is found return null
     public Player getPlayerById(Long id){
         return playerRepository.findById(id).orElse(null);
     }
@@ -35,8 +35,7 @@ public class PlayerService {
     // return list of players sorted by their high scores in descending order
     public List<Player> orderByHighScore(){
        List<Player> players = playerRepository.findAll();
-       //TODO: ask pearl how to fix
-       players.stream().sorted(Comparator.comparing(Player::getHighScore).reversed()).collect(Collectors.toList());
+       players = players.stream().sorted(Comparator.comparing(Player::getHighScore).reversed()).collect(Collectors.toList());
        return players;
     }
 

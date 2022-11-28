@@ -1,11 +1,31 @@
 body {
-    color:white;
-    background-color:black;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: Varela Round;
+    font-size: 16px;
     max-width: 500px;
     margin: auto;
 }
 
+input{
+    color: #ffffff;
+    background: #000000;
+    border: solid 1px #FFFFFF;
+}
+
+button {
+    color: #FFFFFF;
+    background: #000000;
+    border: solid 1px #FFFFFF;
+}
+
+button:hover{
+    color: #ffff00;
+    cursor: pointer;
+    border: solid 1px #ffff00;
+}
+
 .light-mode {
-    color:black;
-    background-color:white;
+    color: black;
+    background-color: white;
 }
