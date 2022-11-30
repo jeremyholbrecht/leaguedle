@@ -11,6 +11,7 @@ input{
     color: #ffffff;
     background: #000000;
     border: solid 1px #FFFFFF;
+    margin-bottom: 25px;
 }
 
 button {

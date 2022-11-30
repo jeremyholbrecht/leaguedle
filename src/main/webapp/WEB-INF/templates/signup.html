@@ -11,6 +11,13 @@
 </head>
 <body>
 <div id="container">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Login</li>
+            <li>Sign Up</li>
+        </ul>
+    </nav>
   <form role="form" method="post" th:action="@{/signup}" th:object="${player}">
       <h3>Username</h3>
       <input type="text" th:field="*{userName}"/>
