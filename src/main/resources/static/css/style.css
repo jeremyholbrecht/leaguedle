@@ -7,17 +7,45 @@ body {
     margin: auto;
 }
 
+form{
+    padding-top: 50px;
+}
+
+li{
+    float: left;
+    padding-left: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li a{
+    color: #ffffff;
+    display: block;
+    padding: 8xp;
+}
+
+ul li a:hover{
+    color: #ffff00;
+}
+
+
 input{
     color: #ffffff;
     background: #000000;
-    border: solid 1px #FFFFFF;
+    border: solid 2px #FFFFFF;
     margin-bottom: 25px;
+
 }
 
 button {
     color: #FFFFFF;
     background: #000000;
-    border: solid 1px #FFFFFF;
+    border: solid 2px #FFFFFF;
+    padding: 10px 32px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 button:hover{
