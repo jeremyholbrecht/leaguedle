@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ChampionController {
@@ -16,11 +17,13 @@ public class ChampionController {
         this.championService = championService;
     }
 
-    @GetMapping("index")
+    @GetMapping("/classic")
     public String randomChampion(Model model){
-        model.addAttribute("index", championService.randomChampion());
-        return "index";
+        model.addAttribute("classic", championService.randomChampion());
+        return "classic";
     }
+
+
 
     @GetMapping("/champion")
     public String getAllChampions(Model model){

@@ -19,13 +19,19 @@
         </ul>
     </nav>
 
-    <div id="gameModes">
-        <a href="classic">Classic</a>
-        <a href="Quote"></a>
-        <a href="Ability"></a>
-    </div>
+    <form role="form" method="post" th:action="@{/classic}" th:object="${champion}">
+        <h3>Guess today's champion!</h3>
+        <input type="text" placeholder="Type champion name..."/>
+        <br>
+        <button type="submit" value="Submit">Submit</button>
+    </form>
 
-    <a href="classic">Classic</a>
+    <div th:each="c:${classic}">
+        <h3>Champion Name</h3>
+        <p th:text="${c.championName}"></p>
+        <h3>Champion Gender</h3>
+        <p th:text="${c.championGender}"></p>
+    </div>
 </div>
 
 </body>

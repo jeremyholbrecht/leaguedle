@@ -1,12 +1,12 @@
 package be.intecbrussel.leaguedle.champion;
 
-import be.intecbrussel.leaguedle.player.Player;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
+
 @Service
 public class ChampionService {
 
@@ -33,5 +33,7 @@ public class ChampionService {
         Collections.shuffle(champions);
         return champions.subList(0,1);
     }
+
+
 
 }
