@@ -16,13 +16,14 @@ public class Champion {
     private String championResource;
     private String championRangeType;
     private String championRegion;
+    private String championQuote;
     private Integer championReleaseYear;
 
     public Champion(){}
 
     public Champion(String championName, String championGender, String championPosition, String championSpecies,
-                    String championResource, String championRangeType, String championRegion,
-                    Integer championReleaseYear) {
+                    String championResource, String championRangeType, String championRegion, String championQuote
+                    ,Integer championReleaseYear) {
         this.championName = championName;
         this.championGender = championGender;
         this.championPosition = championPosition;
@@ -30,6 +31,7 @@ public class Champion {
         this.championResource = championResource;
         this.championRangeType = championRangeType;
         this.championRegion = championRegion;
+        this.championQuote = championQuote;
         this.championReleaseYear = championReleaseYear;
     }
 
@@ -89,6 +91,10 @@ public class Champion {
         this.championRegion = championRegion;
     }
 
+    public String getChampionQuote(){return championQuote;}
+
+    public void setChampionQuote(String championQuote){this.championQuote = championQuote;}
+
     public Integer getChampionReleaseYear() {
         return championReleaseYear;
     }
@@ -108,6 +114,7 @@ public class Champion {
                 ", championResource='" + championResource + '\'' +
                 ", championRangeType='" + championRangeType + '\'' +
                 ", championRegion='" + championRegion + '\'' +
+                ", championQuote='" + championQuote + '\'' +
                 ", championReleaseYear=" + championReleaseYear +
                 '}';
     }
