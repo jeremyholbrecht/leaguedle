@@ -4,7 +4,9 @@ import be.intecbrussel.leaguedle.player.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 @Service
 public class ChampionService {
 
@@ -24,4 +26,12 @@ public class ChampionService {
     public Champion getChampionById(Long championId){
         return championRepository.findById(championId).orElse(null);
     }
+
+    // generate random champion
+    public List<Champion> randomChampion(){
+        List<Champion> champions = championRepository.findAll();
+        Collections.shuffle(champions);
+        return champions.subList(0,1);
+    }
+
 }

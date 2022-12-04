@@ -16,10 +16,16 @@ public class ChampionController {
         this.championService = championService;
     }
 
-    @GetMapping("/champions")
+    @GetMapping("index")
+    public String randomChampion(Model model){
+        model.addAttribute("index", championService.randomChampion());
+        return "index";
+    }
+
+    @GetMapping("/champion")
     public String getAllChampions(Model model){
         model.addAttribute("champion", championService.getAllChampions());
-        return "champions";
+        return "champion";
     }
 
     @GetMapping("/champion/{id}")
