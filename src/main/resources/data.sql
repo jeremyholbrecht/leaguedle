@@ -9,18 +9,19 @@ VALUES ('A0me','blabla3','A0me@gmail.com',15,7,7500);
 
 INSERT INTO champions (championName, championGender, championPosition, championSpecies, championResource,
 championRangeType, championRegion,championQuote, championReleaseYear)
-VALUES ('Yone', 'Male', 'Mid', 'Human', 'Manaless', 'Melee', 'Ionia','mmlllmmlmm',2020);
+VALUES ('Yone', 'Male', 'Mid', 'Human', 'Manaless', 'Melee', 'Ionia','Sleep is not for the weak, but for the blessed.'
+,2020);
 
 INSERT INTO champions (championName, championGender, championPosition, championSpecies, championResource,
 championRangeType, championRegion, championQuote,championReleaseYear)
-VALUES ('Yasuo', 'Male', 'Mid', 'Human', 'Flow', 'Melee', 'Ionia','dfsdfs',2013);
+VALUES ('Yasuo', 'Male', 'Mid', 'Human', 'Flow', 'Melee', 'Ionia','Honor is in the heart, not the name.',2013);
 
 INSERT INTO champions (championName, championGender, championPosition, championSpecies, championResource,
 championRangeType, championRegion,championQuote, championReleaseYear)
-VALUES ('Syndra', 'Female', 'Mid', 'Human', 'Mana', 'Ranged', 'Ionia','aaaaaaa',2012);
+VALUES ('Syndra', 'Female', 'Mid', 'Human', 'Mana', 'Ranged', 'Ionia','People fear what they cannot understand.',2012);
 
 INSERT INTO champions (championName, championGender, championPosition, championSpecies, championResource,
 championRangeType, championRegion, championQuote,championReleaseYear)
-VALUES ('Soraka', 'Female', 'Support', 'Celestial', 'Mana', 'Ranged', 'Targon','zzzzzzzzz',2009);
+VALUES ('Soraka', 'Female', 'Support', 'Celestial', 'Mana', 'Ranged', 'Targon','Every step, a new journey.',2009);
 
 
