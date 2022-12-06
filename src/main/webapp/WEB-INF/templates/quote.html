@@ -19,8 +19,9 @@
     </ul>
   </nav>
 
+  <h3 id="quoteH3">Which champion says</h3>
+
   <div th:each="q:${quote}">
-    <h3>Which champion says</h3>
     <p th:text="${q.championQuote}"></p>
   </div>
 

@@ -54,6 +54,12 @@ button:hover{
     border: solid 1px #ffff00;
 }
 
+#quoteH3{
+    display: red;
+    color: orange;
+    padding-top: 50px;
+}
+
 .light-mode {
     color: black;
     background-color: white;
